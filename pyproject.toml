@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sam3"
-dynamic = ["version"]
+version = "0.1.0"
 description = "SAM3 (Segment Anything Model 3) implementation"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -91,9 +91,6 @@ packages = ["sam3", "sam3.model", "sam3.sam", "sam3.train", "sam3.perflib"]
 
 [tool.setuptools.package-data]
 sam3 = ["../assets/*.gz"]
-
-[tool.setuptools.dynamic]
-version = {attr = "sam3.__version__"}
 
 [tool.black]
 line-length = 88
