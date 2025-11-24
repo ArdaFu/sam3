@@ -95,6 +95,30 @@ pip install -e ".[notebooks]"
 pip install -e ".[train,dev]"
 ```
 
+### Building a Distribution Wheel
+
+To build a pip wheel for distribution:
+
+```bash
+# Install build tools
+pip install build
+
+# Build both wheel and source distribution
+python -m build
+
+# Build only wheel
+python -m build --wheel
+```
+
+The built distributions will be in the `dist/` directory:
+- `sam3-0.1.0-py3-none-any.whl` - Wheel distribution
+- `sam3-0.1.0.tar.gz` - Source distribution
+
+You can install the wheel with:
+```bash
+pip install dist/sam3-0.1.0-py3-none-any.whl
+```
+
 ## Getting Started
 
 ⚠️ Before using SAM 3, please request access to the checkpoints on the SAM 3
